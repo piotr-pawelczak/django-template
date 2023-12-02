@@ -5,8 +5,8 @@ select = [
   "UP",  # pyupgrade,
   "I",   # isort
 
-  "D",   # pydocstyle
-  "D401",   # Require an imperative mood for all docstrings.
+  "D",    # pydocstyle
+  "D401", # Require an imperative mood for all docstrings.
 ]
 
 ignore = [
