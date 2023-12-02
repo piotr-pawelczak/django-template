@@ -16,6 +16,7 @@ ignore = [
   "D104", # Missing docstring in public package
   "D212", # Allow start summary at second line in multi-line docstring
   "D106", # Missing docstring in nested class
+  "D102",
 ]
 
 [lint.pydocstyle]
