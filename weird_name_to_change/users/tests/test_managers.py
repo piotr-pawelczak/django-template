@@ -1,6 +1,6 @@
 import pytest
 
-from weird_name_to_change.users.models import User
+from {{ cookiecutter.project_slug }}.users.models import User
 
 
 @pytest.mark.django_db

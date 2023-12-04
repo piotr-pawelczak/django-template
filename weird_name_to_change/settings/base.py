@@ -25,7 +25,7 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    "weird_name_to_change.users",
+    "{{ cookiecutter.project_slug }}.users",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -42,9 +42,9 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "weird_name_to_change.urls"
+ROOT_URLCONF = "{{ cookiecutter.project_slug }}.urls"
 
-WSGI_APPLICATION = "weird_name_to_change.wsgi.application"
+WSGI_APPLICATION = "{{ cookiecutter.project_slug }}.wsgi.application"
 
 # ------------ TEMPLATES ------------
 
@@ -69,7 +69,7 @@ TEMPLATES = [
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("POSTGRES_DB", "weird_name_to_change"),
+        "NAME": os.environ.get("POSTGRES_DB", "{{ cookiecutter.project_slug }}"),
         "USER": os.environ.get("POSTGRES_USER", "postgres"),
         "PASSWORD": os.environ.get("POSTGRES_PASSWORD", "postgres"),
         "HOST": os.environ.get("POSTGRES_HOST", "localhost"),

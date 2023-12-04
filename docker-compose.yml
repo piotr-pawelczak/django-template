@@ -8,7 +8,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=weird_name_to_change
+      - POSTGRES_DB={{ cookiecutter.project_slug }}
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
 
@@ -22,7 +22,7 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_URL=postgres://postgres:postgres@db:5432/weird_name_to_change
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/{{ cookiecutter.project_slug }}
       - POSTGRES_HOST=db
 
 
