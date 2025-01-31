@@ -30,6 +30,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
 
+    {% raw %}
     steps:
       - uses: actions/checkout@v3
 
@@ -63,3 +64,4 @@ jobs:
       - name: Run tests
         run: |
           poetry run pytest
+    {% endraw %}
